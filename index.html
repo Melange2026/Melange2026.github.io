@@ -112,6 +112,10 @@
   @media (max-width:900px){ .grid4{grid-template-columns:repeat(2,1fr)} }
   @media (max-width:560px){ .grid4{grid-template-columns:1fr} }
 
+  /* Video section */
+  .video-frame{max-width:900px;margin:0 auto;border-radius:6px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px -20px rgba(58,44,26,.35)}
+  .video-frame video{width:100%;display:block;background:#000}
+
   /* Season timeline — horizontal stepper */
   .season{background:var(--ink);color:#fff}
   .season .kicker{color:#d9b877}
@@ -181,8 +185,8 @@
   <section class="hero">
     <div class="wrap">
       <span class="eyebrow">Dodballapur, Karnataka · Founding SPICE100 Grower</span>
-      <h1>We're not hoping for <span class="accent">4% curcumin.</span><br>We're growing for it — and verifying it.</h1>
-      <p class="hero-sub">Melange Farms grows the Pratibha turmeric variety in a controlled, solar-powered shadenet — every input metered, every claim lab-checked.</p>
+      <h1>100% Traceable.<br><span class="accent">Lab-Verified.</span> Zero Compromise.</h1>
+      <p class="hero-sub">Precision-grown in our solar-powered shadenet. Digitally logged. Lab-verified. Turmeric from Melange Farms — fully traceable from soil to consumer.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">Talk to us before harvest</a>
         <a class="btn btn-outline" href="#process">See how it's grown</a>
@@ -237,6 +241,21 @@
           <h3>Traceable</h3>
           <p>Not pooled from unnamed sources — one sustainable operation, one season, one person accountable end to end: Melange Farms, Karnataka.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="kicker">Inside the Shadenet</div>
+      <div class="block-head">
+        <h2>See the farm behind the numbers</h2>
+        <p>A walkthrough of the shadenet — rows of Pratibha turmeric under solar-powered climate and irrigation control.</p>
+      </div>
+      <div class="video-frame">
+        <video controls preload="metadata" poster="farm-poster.jpg">
+          <source src="farm-video.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
