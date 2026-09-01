@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Melange Farms — Lab-Verified Pratibha Turmeric</title>
 <meta name="description" content="Melange Farms grows lab-verified, >4% curcumin Pratibha turmeric in a solar-powered, sensor-monitored shadenet in Dodballapur, Karnataka. Founding member of SPICE100.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Melange Farms — Lab-Verified Pratibha Turmeric">
+<meta property="og:description" content="A solar-powered, sensor-monitored shadenet growing >4% curcumin Pratibha turmeric in Dodballapur, Karnataka. Founding member of SPICE100.">
+<meta property="og:image" content="https://melange2026.github.io/photo-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23b5822e'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23fbf6ec' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
   :root{
     --gold:#b5822e;
@@ -21,7 +34,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
     color:var(--ink);
     background:var(--paper);
     line-height:1.6;
@@ -91,9 +104,8 @@
 
   /* Process grid (Markets-style cards) */
   .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-  .grid4 .card{background:var(--paper);padding:0 0 28px}
-  .card img{width:100%;height:150px;object-fit:cover}
-  .card .card-body{padding:22px 24px 0}
+  .grid4 .card{background:var(--paper);padding:36px 30px;transition:background .15s ease}
+  .grid4 .card:hover{background:var(--cream)}
   .card .num{font-size:.78rem;font-weight:800;color:var(--gold);letter-spacing:.08em;margin-bottom:14px}
   .card h3{font-size:1.08rem;font-weight:700;margin-bottom:10px}
   .card p{font-size:.92rem;color:var(--ink-soft)}
@@ -206,36 +218,24 @@
 
       <div class="grid4">
         <div class="card">
-          <img src="photo-farm.jpg" alt="Shadenet structure under construction, Melange Farms">
-          <div class="card-body">
-            <div class="num">01</div>
-            <h3>The Farm</h3>
-            <p>A 1.25-acre shadenet — 9,800 grow bags across 12 zones — growing Pratibha turmeric in pure, washed, low-EC cocopeat instead of open soil.</p>
-          </div>
+          <div class="num">01</div>
+          <h3>The Farm</h3>
+          <p>A 1.25-acre shadenet — 9,800 grow bags across 12 zones — growing Pratibha turmeric in pure, washed, low-EC cocopeat instead of open soil.</p>
         </div>
         <div class="card">
-          <img src="photo-tech.jpg" alt="Sensor and irrigation lines across the shadenet canopy">
-          <div class="card-body">
-            <div class="num">02</div>
-            <h3>The Tech</h3>
-            <p>Irrigation, fertigation and climate are sensor-logged in real time and run on solar power with battery backup. Every input is metered, not guessed.</p>
-          </div>
+          <div class="num">02</div>
+          <h3>The Tech</h3>
+          <p>Irrigation, fertigation and climate are sensor-logged in real time and run on solar power with battery backup. Every input is metered, not guessed.</p>
         </div>
         <div class="card">
-          <img src="photo-science.jpg" alt="Close-up of healthy turmeric plants in grow bags">
-          <div class="card-body">
-            <div class="num">03</div>
-            <h3>Scientifically Grown</h3>
-            <p>Root-zone analysis every 30 days tracks curcumin build-up. Protection is chemical-free biopesticides. At harvest: a lab-verified assay, available on request.</p>
-          </div>
+          <div class="num">03</div>
+          <h3>Scientifically Grown</h3>
+          <p>Root-zone analysis every 30 days tracks curcumin build-up. Protection is chemical-free biopesticides. At harvest: a lab-verified assay, available on request.</p>
         </div>
         <div class="card">
-          <img src="photo-traceable.jpg" alt="Rows of turmeric plants inside the Melange Farms shadenet">
-          <div class="card-body">
-            <div class="num">04</div>
-            <h3>Traceable</h3>
-            <p>Not pooled from unnamed sources — one sustainable operation, one season, one person accountable end to end: Melange Farms, Karnataka.</p>
-          </div>
+          <div class="num">04</div>
+          <h3>Traceable</h3>
+          <p>Not pooled from unnamed sources — one sustainable operation, one season, one person accountable end to end: Melange Farms, Karnataka.</p>
         </div>
       </div>
     </div>
