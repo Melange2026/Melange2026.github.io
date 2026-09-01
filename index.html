@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melange Farms — Lab-Verified Pratibha Turmeric</title>
+<meta name="description" content="Melange Farms grows lab-verified, >4% curcumin Pratibha turmeric in a solar-powered, sensor-monitored shadenet in Dodballapur, Karnataka. Founding member of SPICE100.">
+<style>
+  :root{
+    --turmeric:#d97a1f;
+    --turmeric-dark:#b8600f;
+    --leaf:#2f4d34;
+    --leaf-dark:#1e3323;
+    --cream:#fbf4e8;
+    --paper:#fffaf1;
+    --ink:#241a10;
+    --ink-soft:#5b5142;
+    --line:#e8dcc5;
+    --max:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+  }
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;font-weight:700}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  img{max-width:100%}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,250,241,.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;letter-spacing:.01em;text-decoration:none}
+  .brand-mark{width:30px;height:30px;border-radius:50%;background:conic-gradient(from 210deg,var(--turmeric),#f2a53c,var(--turmeric));flex:none}
+  nav{display:flex;gap:26px}
+  nav a{font-size:.92rem;text-decoration:none;color:var(--ink-soft);font-weight:600}
+  nav a:hover{color:var(--turmeric-dark)}
+  .nav-cta{
+    background:var(--leaf);color:#fff;padding:9px 18px;border-radius:999px;
+    font-size:.88rem;font-weight:700;text-decoration:none;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--leaf-dark)}
+  @media (max-width:720px){ nav a:not(.nav-cta){display:none} }
+
+  /* Hero */
+  .hero{
+    padding:80px 0 64px;
+    background:
+      radial-gradient(ellipse at 85% -10%, rgba(217,122,31,.16), transparent 55%),
+      radial-gradient(ellipse at -10% 110%, rgba(47,77,52,.14), transparent 55%),
+      var(--cream);
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--leaf);background:rgba(47,77,52,.09);padding:6px 14px;border-radius:999px;margin-bottom:22px;
+  }
+  h1{font-size:clamp(2.1rem,4.6vw,3.3rem);max-width:15ch;margin-bottom:20px}
+  h1 em{font-style:normal;color:var(--turmeric-dark)}
+  .hero-sub{font-size:1.15rem;color:var(--ink-soft);max-width:56ch;margin-bottom:30px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:44px}
+  .btn{
+    display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;font-size:.96rem;
+    text-decoration:none;transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--turmeric);color:#fff}
+  .btn-primary:hover{background:var(--turmeric-dark)}
+  .btn-ghost{border:1.5px solid var(--leaf);color:var(--leaf)}
+
+  .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;border-top:1px solid var(--line);padding-top:28px}
+  .stat b{display:block;font-family:Georgia,serif;font-size:1.5rem;color:var(--leaf-dark)}
+  .stat span{font-size:.82rem;color:var(--ink-soft)}
+  @media (max-width:720px){ .stat-row{grid-template-columns:repeat(2,1fr);row-gap:22px} }
+
+  /* Section shell */
+  section{padding:72px 0}
+  .section-head{max-width:60ch;margin-bottom:44px}
+  .kicker{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--turmeric-dark);margin-bottom:10px}
+  h2{font-size:clamp(1.6rem,3vw,2.1rem)}
+  .section-head p{color:var(--ink-soft);margin-top:12px;font-size:1.03rem}
+
+  /* Story grid */
+  .story{display:flex;flex-direction:column;gap:0}
+  .story-item{
+    display:grid;grid-template-columns:64px 1fr;gap:24px;
+    padding:30px 0;border-top:1px solid var(--line);
+  }
+  .story-item:last-child{border-bottom:1px solid var(--line)}
+  .icon{
+    width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    background:var(--leaf);color:#fff;flex:none;
+  }
+  .icon svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.8}
+  .story-item h3{font-size:1.2rem;margin-bottom:6px;color:var(--ink)}
+  .story-item .tag{display:block;font-size:.85rem;font-weight:600;color:var(--turmeric-dark);margin-bottom:8px;font-family:inherit}
+  .story-item p{color:var(--ink-soft)}
+  @media (max-width:640px){ .story-item{grid-template-columns:48px 1fr;gap:16px} .icon{width:44px;height:44px;border-radius:12px} }
+
+  /* Season / timeline */
+  .season{background:var(--leaf);color:#fff}
+  .season .kicker{color:#f2c98a}
+  .season h2{color:#fff}
+  .season .section-head p{color:#d9e3d4}
+  .timeline{display:flex;flex-direction:column;gap:0;position:relative;margin-top:10px}
+  .tl-item{display:grid;grid-template-columns:120px 24px 1fr;gap:0;align-items:start}
+  .tl-date{padding:18px 16px 18px 0;font-weight:700;font-size:.92rem;color:#f2c98a;text-align:right}
+  .tl-dot-col{display:flex;flex-direction:column;align-items:center}
+  .tl-dot{width:12px;height:12px;border-radius:50%;background:#f2c98a;margin-top:22px;flex:none}
+  .tl-line{width:2px;flex:1;background:rgba(255,255,255,.2)}
+  .tl-item:last-child .tl-line{display:none}
+  .tl-body{padding:14px 0 30px 20px}
+  .tl-body b{display:block;margin-bottom:4px}
+  .tl-body span{color:#d9e3d4;font-size:.94rem}
+  .status-chip{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:999px;font-size:.78rem;font-weight:700;margin-left:8px;vertical-align:middle}
+
+  /* Network */
+  .network-card{
+    background:var(--cream);border:1px solid var(--line);border-radius:20px;
+    padding:36px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;
+  }
+  .network-badge{
+    width:84px;height:84px;border-radius:50%;background:#fff;border:2px solid var(--turmeric);
+    display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:700;
+    color:var(--turmeric-dark);font-size:.95rem;text-align:center;line-height:1.1;flex:none;
+  }
+  .network-card h3{font-size:1.25rem;margin-bottom:8px}
+  .network-card p{color:var(--ink-soft)}
+  @media (max-width:600px){ .network-card{grid-template-columns:1fr;text-align:center} .network-badge{margin:0 auto} }
+
+  /* Honesty / open items strip */
+  .honest{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .honest .wrap{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+  .honest p{color:var(--ink-soft);font-size:.94rem;max-width:70ch}
+  .honest strong{color:var(--ink)}
+
+  /* Audience */
+  .audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .audience-card{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--paper)}
+  .audience-card h4{font-size:1rem;margin-bottom:6px}
+  .audience-card p{font-size:.88rem;color:var(--ink-soft)}
+  @media (max-width:820px){ .audience-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:480px){ .audience-grid{grid-template-columns:1fr} }
+
+  /* Contact / CTA */
+  .cta{
+    background:linear-gradient(135deg,var(--turmeric-dark),var(--turmeric));
+    color:#fff;border-radius:24px;padding:52px 40px;text-align:center;margin:0 24px;
+  }
+  .cta h2{color:#fff;margin-bottom:14px}
+  .cta p{color:rgba(255,255,255,.92);max-width:50ch;margin:0 auto 28px}
+  .cta .btn-primary{background:#fff;color:var(--turmeric-dark)}
+  .cta .btn-primary:hover{background:#fff2e0}
+  .cta-email{display:block;margin-top:18px;font-weight:700;letter-spacing:.02em}
+
+  footer{padding:36px 0;color:var(--ink-soft);font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark"></span>Melange Farms</a>
+    <nav>
+      <a href="#story">Our Process</a>
+      <a href="#network">SPICE100</a>
+      <a href="#audience">Who We Work With</a>
+      <a class="nav-cta" href="#contact">Get in Touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Dodballapur, Karnataka · Founding SPICE100 grower</span>
+      <h1>We're not hoping for <em>4% curcumin.</em><br>We're growing for it — and verifying it.</h1>
+      <p class="hero-sub">Melange Farms grows the Pratibha turmeric variety in a controlled, solar-powered shadenet — every input metered, every claim lab-checked. One farm, one grower, fully accountable for the number on the report.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Talk to us before harvest</a>
+        <a class="btn btn-ghost" href="#story">See how it's grown</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b>1.25 acre</b><span>Controlled shadenet, 9,800 grow bags</span></div>
+        <div class="stat"><b>&gt;4%</b><span>Target curcumin, lab-verified</span></div>
+        <div class="stat"><b>100%</b><span>Solar-powered, sensor-monitored</span></div>
+        <div class="stat"><b>1</b><span>Farm, one grower, no blending</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">The Story</div>
+        <h2>Precision farming, not tradition on autopilot</h2>
+        <p>Every claim we make about this turmeric traces back to a specific practice, on a specific farm — not an industry average.</p>
+      </div>
+
+      <div class="story">
+        <div class="story-item">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div>
+          <div>
+            <span class="tag">01 · The Farm</span>
+            <h3>A controlled structure, a clean media</h3>
+            <p>Turmeric grown inside a 1.25-acre shadenet — 9,800 grow bags across 12 zones — using the Pratibha variety in pure, washed, low-EC cocopeat instead of open soil. Not open-field growing left to chance.</p>
+          </div>
+        </div>
+
+        <div class="story-item">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8z"/></svg></div>
+          <div>
+            <span class="tag">02 · The Tech</span>
+            <h3>Solar-powered, sensor-monitored, built to last</h3>
+            <p>Irrigation, fertigation, and climate are sensor-logged in real time and run on solar power with battery backup — pumping is even timed to peak solar generation. Every input is metered, not guessed.</p>
+          </div>
+        </div>
+
+        <div class="story-item">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 3v18M4 8l5-5 5 5M21 12a9 9 0 1 1-9-9"/></svg></div>
+          <div>
+            <span class="tag">03 · Scientifically Grown</span>
+            <h3>Verified nutrients, biological protection</h3>
+            <p>Root-zone analysis every 30 days tracks curcumin build-up months before harvest. The shadenet keeps outside pests out; what's left is handled with chemical-free biopesticides. At harvest: a lab-verified assay, free of harmful metal and pesticide residues, available on request.</p>
+          </div>
+        </div>
+
+        <div class="story-item">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <div>
+            <span class="tag">04 · Traceable</span>
+            <h3>One farm. One grower. No blending.</h3>
+            <p>This turmeric isn't pooled from unnamed sources. It's one sustainable, water- and soil-preserving operation, one season, one person accountable end to end: Melange Farms, Karnataka.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="season">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Season One, In Real Time</div>
+        <h2>Follow the process, not just the result</h2>
+        <p>We're publishing this ahead of harvest on purpose — the goal right now is real conversations with serious buyers, not a one-off announcement once the crop is in.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">Jun 2026</div>
+          <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body"><b>Planted</b><span>Pratibha variety planted 29 June 2026, start of a 39-week cycle.</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Sep 2026</div>
+          <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body"><b>Growing — QC underway <span class="status-chip">In progress</span></b><span>Monthly root-zone analysis, sensor monitoring and biocontrol protocols running now; building buyer relationships ahead of harvest.</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Mar–Apr 2027</div>
+          <div class="tl-dot-col"><div class="tl-dot"></div></div>
+          <div class="tl-body"><b>Harvest (estimated)</b><span>Lab assay, final volumes and product form confirmed at harvest.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="network">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Part of a Trusted Network</div>
+        <h2>We're not asking buyers to take our word alone</h2>
+      </div>
+      <div class="network-card">
+        <div class="network-badge">SPICE<br>100</div>
+        <div>
+          <h3>Founding grower member, SPICE100</h3>
+          <p>SPICE100 (Strategic Portal for Indian Cultivators &amp; Entrepreneurs) is building India's most trusted ecosystem for traceable, pesticide-residue-free, soilless-grown turmeric — connecting verified growers directly to institutional buyers and export partners. Membership holds our production to the collective's shared quality and traceability standards, on top of our own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="honest">
+    <div class="wrap">
+      <p><strong>Where things stand today:</strong> farm scale, growing method, and curcumin target (&gt;4%, lab-verified) are confirmed and stated above. Final product form, certifications, harvest volume, and pricing are still being finalized as harvest approaches — ask us for the latest.</p>
+    </div>
+  </section>
+
+  <section id="audience">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Who We Work With</div>
+        <h2>Built for buyers who need documented, verifiable sourcing</h2>
+      </div>
+      <div class="audience-grid">
+        <div class="audience-card"><h4>Nutraceutical &amp; Ayurvedic brands</h4><p>R&amp;D and procurement teams who need a verifiable curcumin number, not a claim.</p></div>
+        <div class="audience-card"><h4>Spice wholesalers &amp; importers</h4><p>Traders and export partners sourcing clean, traceable raw turmeric.</p></div>
+        <div class="audience-card"><h4>Food &amp; beverage manufacturers</h4><p>Buyers who need consistent, lab-checked supply for formulation.</p></div>
+        <div class="audience-card"><h4>Private-label &amp; D2C brands</h4><p>Retailers and D2C teams who want a named farm behind their sourcing story.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="cta">
+      <h2>Come see the farm behind the numbers</h2>
+      <p>Harvest is still months out — that's the right time to start the conversation, not after. Get in touch for lab reports, farm details, or to be first in line as harvest data comes in.</p>
+      <a class="btn btn-primary" href="mailto:melangefarmsblr@gmail.com">Email Melange Farms</a>
+      <span class="cta-email">melangefarmsblr@gmail.com</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Melange Farms · Dodballapur, Karnataka, India</span>
+    <span>Founding grower member, SPICE100</span>
+  </div>
+</footer>
+
+</body>
+</html>
