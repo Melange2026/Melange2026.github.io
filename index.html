@@ -78,18 +78,12 @@
   .btn-outline:hover{border-color:var(--cream);color:var(--cream)}
 
   /* Full-bleed arrival band */
-  .arrival{position:relative;padding:90px 0;text-align:center;overflow:hidden;color:#fff}
+  .arrival{position:relative;padding:220px 0;text-align:center;overflow:hidden;color:#fff}
   .arrival video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
   .arrival::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,26,.5),rgba(58,44,26,.72));z-index:1}
   .arrival .wrap{position:relative;z-index:2}
   .arrival .kicker{color:#e8c988}
   .arrival h2{color:#fff;font-size:clamp(1.6rem,3.2vw,2.4rem);font-weight:800;max-width:32ch;margin:0 auto}
-
-  /* Full-bleed statement band */
-  .statement{position:relative;color:#fff;padding:130px 0;text-align:center;overflow:hidden;background:linear-gradient(120deg,var(--olive-dark),var(--olive))}
-  .statement .wrap{position:relative;z-index:2}
-  .statement blockquote{font-size:clamp(1.5rem,3vw,2.3rem);font-weight:800;line-height:1.3;max-width:34ch;margin:0 auto}
-  .statement cite{display:block;margin-top:26px;font-style:normal;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;color:#e6e2cf;opacity:.85}
 
   /* Stat strip */
   .stats{background:var(--cream);border-bottom:1px solid var(--line)}
@@ -101,9 +95,9 @@
   @media (max-width:480px){ .stat-row{grid-template-columns:1fr} .stat{border-left:none;border-top:1px solid var(--line);padding-top:20px} .stat:first-child{border-top:none;padding-top:0} }
 
   /* Section shell */
-  section.block{padding:100px 0}
+  section.block{padding:130px 0}
   .kicker{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:14px;text-align:center}
-  .block-head{max-width:56ch;margin:0 auto 60px;text-align:center}
+  .block-head{max-width:56ch;margin:0 auto 70px;text-align:center}
   h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;letter-spacing:-.01em}
   .block-head p{color:var(--ink-soft);margin-top:14px;font-size:1.05rem}
 
@@ -147,11 +141,6 @@
   .network-card h3{font-size:1.2rem;margin-bottom:8px}
   .network-card p{color:var(--ink-soft);font-size:.95rem}
   @media (max-width:600px){ .network-card{grid-template-columns:1fr;text-align:center;padding:32px} .network-badge{margin:0 auto} }
-
-  /* Honesty strip */
-  .honest{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
-  .honest p{color:var(--ink-soft);font-size:.92rem;text-align:center;max-width:80ch;margin:0 auto}
-  .honest strong{color:var(--ink)}
 
   /* Audience grid */
   .audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
@@ -239,13 +228,6 @@
     <div class="wrap">
       <div class="kicker">The Location</div>
       <h2>In the foothills of Dodballapur, Karnataka</h2>
-    </div>
-  </section>
-
-  <section class="statement">
-    <div class="wrap">
-      <blockquote>No blending. No mystery. No compromise. You know exactly where your turmeric comes from.</blockquote>
-      <cite>The Melange Farms Standard</cite>
     </div>
   </section>
 
@@ -392,12 +374,6 @@
       </div>
     </div>
   </section>
-
-  <div class="honest">
-    <div class="wrap">
-      <p><strong>Where things stand today:</strong> farm scale, growing method, and curcumin target (&gt;4%, lab-verified) are confirmed and stated above. Final product form, certifications, harvest volume, and pricing are still being finalized as harvest approaches — ask us for the latest.</p>
-    </div>
-  </div>
 
   <section class="block" id="audience">
     <div class="wrap">
