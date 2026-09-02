@@ -150,6 +150,21 @@
   @media (max-width:900px){ .audience-grid{grid-template-columns:repeat(2,1fr)} }
   @media (max-width:480px){ .audience-grid{grid-template-columns:1fr} }
 
+  /* Shop / pre-order grid */
+  .shop-note{max-width:56ch;margin:-20px auto 40px;text-align:center;font-size:.82rem;color:var(--ink-soft)}
+  .shop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .shop-card{border-radius:6px;overflow:hidden;border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column}
+  .shop-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .shop-body{padding:16px 18px 20px;display:flex;flex-direction:column;flex:1}
+  .shop-card h4{font-size:.98rem;font-weight:700;margin-bottom:6px}
+  .shop-card p{font-size:.85rem;color:var(--ink-soft);flex:1}
+  .shop-price{font-weight:800;color:var(--gold-dark);font-size:1.05rem;margin:12px 0 12px}
+  .shop-price small{font-weight:600;color:var(--ink-soft);font-size:.72rem;text-transform:uppercase}
+  .shop-cta{display:block;text-align:center;background:var(--olive);color:#fff;padding:10px 16px;border-radius:3px;font-size:.85rem;font-weight:700;text-decoration:none}
+  .shop-cta:hover{background:var(--olive-dark)}
+  @media (max-width:900px){ .shop-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:560px){ .shop-grid{grid-template-columns:1fr} }
+
   /* Contact card */
   .contact-wrap{max-width:680px;margin:0 auto;border:1px solid var(--line);border-radius:8px;padding:44px;text-align:center;background:var(--cream)}
   .contact-wrap h3{font-size:1.3rem;margin-bottom:10px}
@@ -189,6 +204,7 @@
     <nav>
       <a href="#process">Our Process</a>
       <a href="#audience">Who We Serve</a>
+      <a href="#shop">Shop</a>
       <a href="#network">SPICE100</a>
       <a class="nav-cta" href="#contact">Get in Touch</a>
     </nav>
@@ -386,6 +402,56 @@
         <div class="audience-card"><h4>Spice wholesalers &amp; importers</h4><p>Traders and export partners sourcing clean, traceable raw turmeric.</p></div>
         <div class="audience-card"><h4>Food &amp; beverage manufacturers</h4><p>Buyers who need consistent, lab-checked supply for formulation.</p></div>
         <div class="audience-card"><h4>Private-label &amp; D2C brands</h4><p>Retailers and D2C teams who want a named farm behind their sourcing story.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="shop">
+    <div class="wrap">
+      <div class="kicker">Reserve Ahead of Harvest</div>
+      <div class="block-head">
+        <h2>Pre-order from the Melange Farms harvest</h2>
+        <p>Reserve your place in line before Season One is in.</p>
+      </div>
+      <p class="shop-note">Mockup for review — products and prices below are placeholders, not live yet.</p>
+
+      <div class="shop-grid">
+        <div class="shop-card">
+          <img src="story-7.jpg" alt="Wet turmeric, Pratibha variety">
+          <div class="shop-body">
+            <h4>Wet Turmeric — Pratibha</h4>
+            <p>Fresh rhizomes, hand-harvested, lab-verified curcumin.</p>
+            <div class="shop-price">₹ 180<small> / kg · placeholder</small></div>
+            <a class="shop-cta" href="#contact">Reserve Now</a>
+          </div>
+        </div>
+        <div class="shop-card">
+          <img src="hero-loop-poster.jpg" alt="Turmeric powder, Pratibha variety">
+          <div class="shop-body">
+            <h4>Turmeric Powder — Pratibha</h4>
+            <p>Milled from &gt;4% curcumin rhizomes. 100% soilless, residue-free.</p>
+            <div class="shop-price">₹ 650<small> / kg · placeholder</small></div>
+            <a class="shop-cta" href="#contact">Reserve Now</a>
+          </div>
+        </div>
+        <div class="shop-card">
+          <img src="statement-poster.jpg" alt="Seed rhizomes, Pratibha variety">
+          <div class="shop-body">
+            <h4>Seed Rhizomes — Pratibha</h4>
+            <p>Mother rhizomes for growers starting their own soilless cycle.</p>
+            <div class="shop-price">₹ 230<small> / kg · placeholder</small></div>
+            <a class="shop-cta" href="#contact">Reserve Now</a>
+          </div>
+        </div>
+        <div class="shop-card">
+          <img src="farm-poster.jpg" alt="Bulk and wholesale turmeric reservation">
+          <div class="shop-body">
+            <h4>Bulk / Wholesale</h4>
+            <p>Volume reservations for wholesalers, manufacturers and export partners.</p>
+            <div class="shop-price">Ask us<small> · quote on request</small></div>
+            <a class="shop-cta" href="#contact">Talk to Us</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
