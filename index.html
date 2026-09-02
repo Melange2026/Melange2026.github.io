@@ -53,7 +53,7 @@
   /* Header */
   header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
   header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
-  .brand img{height:38px;width:auto}
+  .brand img{height:54px;width:auto}
   nav{display:flex;gap:30px;align-items:center}
   nav a{font-size:.9rem;text-decoration:none;color:var(--ink-soft);font-weight:600}
   nav a:hover{color:var(--gold-dark)}
@@ -62,18 +62,19 @@
   @media (max-width:760px){ nav a:not(.nav-cta){display:none} }
 
   /* Hero */
-  .hero{padding:96px 0 0;text-align:center}
-  .eyebrow{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--olive-dark);margin-bottom:28px}
-  h1{font-size:clamp(2rem,4.4vw,3.4rem);font-weight:800;letter-spacing:-.01em;line-height:1.18;max-width:23ch;margin:0 auto 26px}
-  h1 .accent{color:var(--gold)}
-  .hero-sub{font-size:1.2rem;color:var(--ink-soft);max-width:52ch;margin:0 auto 40px}
-  .hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-bottom:56px}
+  .hero{position:relative;padding:120px 0;text-align:center;overflow:hidden;color:#fff}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,26,.72),rgba(58,44,26,.6)),url('hero-crop.jpg') center/cover no-repeat;z-index:0}
+  .hero .wrap{position:relative;z-index:1}
+  h1{font-size:clamp(2rem,4.4vw,3.4rem);font-weight:800;letter-spacing:-.01em;line-height:1.18;max-width:23ch;margin:0 auto 26px;color:#fff}
+  h1 .accent{color:#e8c988}
+  .hero-sub{font-size:1.2rem;color:#f1ecdf;max-width:52ch;margin:0 auto 40px}
+  .hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-bottom:8px}
   .btn{display:inline-block;padding:14px 28px;border-radius:3px;font-weight:700;font-size:.95rem;text-decoration:none;transition:transform .15s ease, background .15s ease}
   .btn:hover{transform:translateY(-1px)}
   .btn-primary{background:var(--gold);color:#fff}
   .btn-primary:hover{background:var(--gold-dark)}
-  .btn-outline{border:1.5px solid var(--ink);color:var(--ink)}
-  .btn-outline:hover{border-color:var(--olive);color:var(--olive)}
+  .btn-outline{border:1.5px solid #fff;color:#fff}
+  .btn-outline:hover{border-color:var(--cream);color:var(--cream)}
 
   /* Full-bleed statement band */
   .statement{position:relative;color:#fff;padding:130px 0;text-align:center;overflow:hidden}
@@ -85,12 +86,11 @@
 
   /* Stat strip */
   .stats{background:var(--cream);border-bottom:1px solid var(--line)}
-  .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:44px 0}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:44px 0}
   .stat{text-align:center;border-left:1px solid var(--line)}
   .stat:first-child{border-left:none}
   .stat b{display:block;font-size:1.9rem;font-weight:800;color:var(--gold-dark)}
   .stat span{font-size:.82rem;color:var(--ink-soft)}
-  @media (max-width:760px){ .stat-row{grid-template-columns:repeat(2,1fr);row-gap:28px} .stat:nth-child(3){border-left:none} }
   @media (max-width:480px){ .stat-row{grid-template-columns:1fr} .stat{border-left:none;border-top:1px solid var(--line);padding-top:20px} .stat:first-child{border-top:none;padding-top:0} }
 
   /* Section shell */
@@ -113,6 +113,17 @@
   /* Video section */
   .video-frame{max-width:900px;margin:0 auto;border-radius:6px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px -20px rgba(58,44,26,.35)}
   .video-frame video{width:100%;display:block;background:#000}
+
+  /* Story grid */
+  .story-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .story-card{border-radius:6px;overflow:hidden;border:1px solid var(--line);background:var(--paper)}
+  .story-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .story-body{padding:16px 18px 20px}
+  .story-date{font-size:.72rem;font-weight:800;color:var(--gold-dark);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+  .story-card h4{font-size:.98rem;font-weight:700;margin-bottom:6px}
+  .story-card p{font-size:.85rem;color:var(--ink-soft)}
+  @media (max-width:900px){ .story-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:560px){ .story-grid{grid-template-columns:1fr} }
 
   /* Season timeline — horizontal stepper */
   .season{background:var(--ink);color:#fff}
@@ -148,10 +159,24 @@
   @media (max-width:480px){ .audience-grid{grid-template-columns:1fr} }
 
   /* Contact card */
-  .contact-wrap{max-width:640px;margin:0 auto;border:1px solid var(--line);border-radius:8px;padding:44px;text-align:center;background:var(--cream)}
+  .contact-wrap{max-width:680px;margin:0 auto;border:1px solid var(--line);border-radius:8px;padding:44px;text-align:center;background:var(--cream)}
   .contact-wrap h3{font-size:1.3rem;margin-bottom:10px}
   .contact-wrap p{color:var(--ink-soft);margin-bottom:26px;max-width:46ch;margin-left:auto;margin-right:auto}
   .contact-email{display:block;margin-top:16px;font-weight:700;color:var(--olive-dark);text-decoration:none;font-size:1.05rem}
+
+  /* Contact form */
+  .contact-form{text-align:left;display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:8px}
+  .contact-form .full{grid-column:1/-1}
+  .contact-form label{display:block;font-size:.8rem;font-weight:700;color:var(--ink);margin-bottom:6px}
+  .contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.92rem;color:var(--ink);background:var(--paper)}
+  .contact-form textarea{resize:vertical;min-height:90px}
+  .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+  .contact-form .btn{border:none;cursor:pointer;margin-top:6px}
+  @media (max-width:560px){ .contact-form{grid-template-columns:1fr} }
+
+  .contact-people{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+  .contact-person b{display:block;font-size:.95rem}
+  .contact-person a{font-size:.88rem;color:var(--olive-dark);text-decoration:none}
 
   footer{padding:40px 0;border-top:1px solid var(--line)}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center;font-size:.85rem;color:var(--ink-soft)}
@@ -171,8 +196,8 @@
     <a class="brand" href="#top"><img src="logo-nav.png" alt="Melange Farms"></a>
     <nav>
       <a href="#process">Our Process</a>
-      <a href="#network">SPICE100</a>
       <a href="#audience">Who We Serve</a>
+      <a href="#network">SPICE100</a>
       <a class="nav-cta" href="#contact">Get in Touch</a>
     </nav>
   </div>
@@ -182,9 +207,8 @@
 
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Dodballapur, Karnataka · Founding SPICE100 Grower</span>
       <h1>100% Traceable.<br><span class="accent">Lab-Verified.</span> Zero Compromise.</h1>
-      <p class="hero-sub">Precision-grown in our solar-powered shadenet. Digitally logged. Lab-verified. Turmeric from Melange Farms — fully traceable from soil to consumer.</p>
+      <p class="hero-sub">Precision-grown in our solar-powered shadenet. Digitally logged. Lab-verified. Turmeric from Melange Farms — fully traceable from farm to consumer.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">Talk to us before harvest</a>
         <a class="btn btn-outline" href="#process">See how it's grown</a>
@@ -198,7 +222,6 @@
         <div class="stat"><b>1.25 acre</b><span>Controlled shadenet, 9,800 grow bags</span></div>
         <div class="stat"><b>&gt;4%</b><span>Target curcumin, lab-verified</span></div>
         <div class="stat"><b>100%</b><span>Solar-powered, sensor-monitored</span></div>
-        <div class="stat"><b>1</b><span>Farm, one grower, no blending</span></div>
       </div>
     </div>
   </div>
@@ -225,7 +248,7 @@
         <div class="card">
           <div class="num">01</div>
           <h3>The Farm</h3>
-          <p>A 1.25-acre shadenet — 9,800 grow bags across 12 zones — growing Pratibha turmeric in pure, washed, low-EC cocopeat instead of open soil.</p>
+          <p>No soil means no soil-borne pathogens. No open fields means no airborne residue. No guessing means no compromise. That's our farm.</p>
         </div>
         <div class="card">
           <div class="num">02</div>
@@ -240,7 +263,7 @@
         <div class="card">
           <div class="num">04</div>
           <h3>Traceable</h3>
-          <p>Not pooled from unnamed sources — one sustainable operation, one season, one person accountable end to end: Melange Farms, Karnataka.</p>
+          <p>Every batch traces back to Melange Farms, one harvest season, one verified source. No pooling. No blending. Complete accountability.</p>
         </div>
       </div>
     </div>
@@ -257,6 +280,74 @@
         <video controls preload="metadata" poster="farm-poster.jpg">
           <source src="farm-video.mp4" type="video/mp4">
         </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="kicker">Our Story</div>
+      <div class="block-head">
+        <h2>From bare land to full canopy</h2>
+        <p>Every stage of building Melange Farms, in the order it actually happened.</p>
+      </div>
+      <div class="story-grid">
+        <div class="story-card">
+          <img src="story-1.jpg" alt="Empty land before construction, April 2026">
+          <div class="story-body">
+            <div class="story-date">April 2026</div>
+            <h4>The Land</h4>
+            <p>Raw land at the base of the hills in Dodballapur, before anything was built.</p>
+          </div>
+        </div>
+        <div class="story-card">
+          <img src="story-2.jpg" alt="Shadenet support poles and cable rigging going up, May 2026">
+          <div class="story-body">
+            <div class="story-date">May 2026</div>
+            <h4>Raising the Structure</h4>
+            <p>The shadenet frame goes up, post by post and cable by cable.</p>
+          </div>
+        </div>
+        <div class="story-card">
+          <img src="story-3.jpg" alt="Shadenet netting installed over marked planting rows, May 2026">
+          <div class="story-body">
+            <div class="story-date">May 2026</div>
+            <h4>The Shadenet Takes Shape</h4>
+            <p>Netting installed, rows marked and readied for cocopeat.</p>
+          </div>
+        </div>
+        <div class="story-card">
+          <img src="story-4.jpg" alt="Team planting turmeric into grow bags, June 2026">
+          <div class="story-body">
+            <div class="story-date">June 2026</div>
+            <h4>Planting Day</h4>
+            <p>9,800 grow bags filled and planted by hand, one at a time.</p>
+          </div>
+        </div>
+        <div class="story-card">
+          <img src="story-5.jpg" alt="Overhead misting irrigation active across the canopy, July 2026">
+          <div class="story-body">
+            <div class="story-date">July 2026</div>
+            <h4>Irrigation Online</h4>
+            <p>Sensor-controlled misting comes online across the canopy.</p>
+          </div>
+        </div>
+        <div class="story-card">
+          <img src="story-6.jpg" alt="Early turmeric shoots in a single grow bag, August 2026">
+          <div class="story-body">
+            <div class="story-date">August 2026</div>
+            <h4>First Growth</h4>
+            <p>Early shoots push through — the first sign it's working.</p>
+          </div>
+        </div>
+        <div class="story-card">
+          <img src="story-7.jpg" alt="Full green canopy of turmeric plants, September 2026">
+          <div class="story-body">
+            <div class="story-date">September 2026</div>
+            <h4>Today</h4>
+            <p>Full canopy, weeks into a 39-week cycle toward harvest.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -329,9 +420,55 @@
     <div class="wrap">
       <div class="contact-wrap">
         <h3>Come see the farm behind the numbers</h3>
-        <p>Harvest is still months out — that's the right time to start the conversation, not after. Get in touch for lab reports, farm details, or to be first in line as harvest data comes in.</p>
-        <a class="btn btn-primary" href="mailto:melangefarmsblr@gmail.com">Email Melange Farms</a>
-        <a class="contact-email" href="mailto:melangefarmsblr@gmail.com">melangefarmsblr@gmail.com</a>
+        <p>Harvest is still months out — that's the right time to start the conversation, not after. Send us a note and we'll get back to you directly.</p>
+
+        <form class="contact-form" action="https://formsubmit.co/melangefarmsblr@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from melange2026.github.io">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <div>
+            <label for="cf-name">Name</label>
+            <input id="cf-name" type="text" name="Name" required>
+          </div>
+          <div>
+            <label for="cf-company">Company</label>
+            <input id="cf-company" type="text" name="Company">
+          </div>
+          <div>
+            <label for="cf-email">Email</label>
+            <input id="cf-email" type="email" name="Email" required>
+          </div>
+          <div>
+            <label for="cf-interest">I'm interested in</label>
+            <select id="cf-interest" name="Interested in">
+              <option>Nutraceutical / Ayurvedic</option>
+              <option>Spice wholesale / import</option>
+              <option>Food &amp; beverage manufacturing</option>
+              <option>Private label / D2C</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="Message" required></textarea>
+          </div>
+          <div class="full">
+            <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          </div>
+        </form>
+
+        <a class="contact-email" href="mailto:melangefarmsblr@gmail.com">Or email us directly: melangefarmsblr@gmail.com</a>
+
+        <div class="contact-people">
+          <div class="contact-person">
+            <b>Ashwin D</b>
+            <a href="tel:+919845304988">+91 98453 04988</a>
+          </div>
+          <div class="contact-person">
+            <b>Kiran BG</b>
+            <a href="tel:+919916371914">+91 99163 71914</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
