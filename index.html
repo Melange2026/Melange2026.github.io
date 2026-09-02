@@ -86,9 +86,7 @@
   .arrival h2{color:#fff;font-size:clamp(1.6rem,3.2vw,2.4rem);font-weight:800;max-width:32ch;margin:0 auto}
 
   /* Full-bleed statement band */
-  .statement{position:relative;color:#fff;padding:130px 0;text-align:center;overflow:hidden}
-  .statement video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-  .statement::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(79,81,43,.88),rgba(114,116,63,.82));z-index:1}
+  .statement{position:relative;color:#fff;padding:130px 0;text-align:center;overflow:hidden;background:linear-gradient(120deg,var(--olive-dark),var(--olive))}
   .statement .wrap{position:relative;z-index:2}
   .statement blockquote{font-size:clamp(1.5rem,3vw,2.3rem);font-weight:800;line-height:1.3;max-width:34ch;margin:0 auto}
   .statement cite{display:block;margin-top:26px;font-style:normal;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;color:#e6e2cf;opacity:.85}
@@ -118,10 +116,6 @@
   .card p{font-size:.92rem;color:var(--ink-soft)}
   @media (max-width:900px){ .grid4{grid-template-columns:repeat(2,1fr)} }
   @media (max-width:560px){ .grid4{grid-template-columns:1fr} }
-
-  /* Video section */
-  .video-frame{max-width:900px;margin:0 auto;border-radius:6px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px -20px rgba(58,44,26,.35)}
-  .video-frame video{width:100%;display:block;background:#000}
 
   /* Story grid */
   .story-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
@@ -249,9 +243,6 @@
   </section>
 
   <section class="statement">
-    <video autoplay muted loop playsinline poster="statement-poster.jpg">
-      <source src="statement-bg.mp4" type="video/mp4">
-    </video>
     <div class="wrap">
       <blockquote>No blending. No mystery. No compromise. You know exactly where your turmeric comes from.</blockquote>
       <cite>The Melange Farms Standard</cite>
@@ -287,21 +278,6 @@
           <h3>Traceable</h3>
           <p>Every batch traces back to Melange Farms, one harvest season, one verified source. No pooling. No blending. Complete accountability.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="wrap">
-      <div class="kicker">Inside the Shadenet</div>
-      <div class="block-head">
-        <h2>See the farm behind the numbers</h2>
-        <p>A walkthrough of the shadenet — rows of Pratibha turmeric under solar-powered climate and irrigation control.</p>
-      </div>
-      <div class="video-frame">
-        <video controls preload="metadata" poster="farm-poster.jpg">
-          <source src="farm-video.mp4" type="video/mp4">
-        </video>
       </div>
     </div>
   </section>
