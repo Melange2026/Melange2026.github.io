@@ -62,7 +62,7 @@
   @media (max-width:760px){ nav a:not(.nav-cta){display:none} }
 
   /* Hero */
-  .hero{position:relative;padding:120px 0;text-align:center;overflow:hidden;color:#fff}
+  .hero{position:relative;padding:90px 0;text-align:center;overflow:hidden;color:#fff}
   .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
   .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,26,.72),rgba(58,44,26,.6));z-index:1}
   .hero .wrap{position:relative;z-index:2}
@@ -78,16 +78,17 @@
   .btn-outline:hover{border-color:var(--cream);color:var(--cream)}
 
   /* Full-bleed arrival band */
-  .arrival{position:relative;padding:130px 0;text-align:center;overflow:hidden;color:#fff}
+  .arrival{position:relative;padding:90px 0;text-align:center;overflow:hidden;color:#fff}
   .arrival video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
   .arrival::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,26,.5),rgba(58,44,26,.72));z-index:1}
   .arrival .wrap{position:relative;z-index:2}
   .arrival .kicker{color:#e8c988}
   .arrival h2{color:#fff;font-size:clamp(1.6rem,3.2vw,2.4rem);font-weight:800;max-width:32ch;margin:0 auto}
+  .arrival-sub{color:#f1ecdf;font-size:1.05rem;max-width:44ch;margin:16px auto 0}
 
   /* Stat strip */
   .stats{background:var(--cream);border-bottom:1px solid var(--line)}
-  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:44px 0}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:34px 0}
   .stat{text-align:center;border-left:1px solid var(--line)}
   .stat:first-child{border-left:none}
   .stat b{display:block;font-size:1.9rem;font-weight:800;color:var(--gold-dark)}
@@ -95,9 +96,9 @@
   @media (max-width:480px){ .stat-row{grid-template-columns:1fr} .stat{border-left:none;border-top:1px solid var(--line);padding-top:20px} .stat:first-child{border-top:none;padding-top:0} }
 
   /* Section shell */
-  section.block{padding:90px 0}
+  section.block{padding:64px 0}
   .kicker{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:14px;text-align:center}
-  .block-head{max-width:56ch;margin:0 auto 50px;text-align:center}
+  .block-head{max-width:56ch;margin:0 auto 36px;text-align:center}
   h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;letter-spacing:-.01em}
   .block-head p{color:var(--ink-soft);margin-top:14px;font-size:1.05rem}
 
@@ -123,7 +124,7 @@
   @media (max-width:560px){ .story-grid{grid-template-columns:1fr} }
 
   /* Network card */
-  .network-card{border:1px solid var(--line);border-radius:6px;padding:44px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;max-width:760px;margin:0 auto}
+  .network-card{border:1px solid var(--line);border-radius:6px;padding:34px 40px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;max-width:760px;margin:0 auto}
   .network-badge{width:88px;height:88px;border-radius:50%;background:var(--cream);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--gold-dark);font-size:.95rem;text-align:center;line-height:1.15;flex:none}
   .network-card h3{font-size:1.2rem;margin-bottom:8px}
   .network-card p{color:var(--ink-soft);font-size:.95rem}
@@ -189,8 +190,8 @@
       <source src="hero-loop.mp4" type="video/mp4">
     </video>
     <div class="wrap">
-      <h1>100% Traceable.<br><span class="accent">Lab-Verified.</span> Zero Compromise.</h1>
-      <p class="hero-sub">Precision-grown in our solar-powered shadenet. Digitally logged. Lab-verified. Turmeric from Melange Farms — fully traceable from farm to consumer.</p>
+      <h1>100% Traceable.<br><span class="accent">Lab-Verified.</span> Grown With Care.</h1>
+      <p class="hero-sub">Every plant in our solar-powered shadenet is tended, watched and cared for by hand — digitally logged, lab-verified, and fully traceable from our farm to you.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#contact">Talk to us before harvest</a>
         <a class="btn btn-outline" href="#process">See how it's grown</a>
@@ -215,6 +216,7 @@
     <div class="wrap">
       <div class="kicker">The Location</div>
       <h2>In the foothills of Dodballapur, Karnataka</h2>
+      <p class="arrival-sub">This is where we spend our days — walking the rows, checking each bag by hand.</p>
     </div>
   </section>
 
@@ -223,7 +225,7 @@
       <div class="kicker">Our Process</div>
       <div class="block-head">
         <h2>Precision farming, not tradition on autopilot</h2>
-        <p>Every claim we make about this turmeric traces back to a specific practice, on a specific farm — not an industry average.</p>
+        <p>Every claim we make about this turmeric traces back to a specific practice, on our farm — because we'd rather get it right than just say it.</p>
       </div>
 
       <div class="grid4">
@@ -330,7 +332,7 @@
     <div class="wrap">
       <div class="contact-wrap">
         <h3>Come see the farm behind the numbers</h3>
-        <p>Harvest is still months out — that's the right time to start the conversation, not after. Send us a note and we'll get back to you directly.</p>
+        <p>Harvest is still months out — that's the right time to start the conversation, not after. Write to us and Ashwin or Kiran will read it personally and get back to you.</p>
 
         <form class="contact-form" action="https://formsubmit.co/melangefarmsblr@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New inquiry from melange2026.github.io">
@@ -398,7 +400,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Melange Farms · Dodballapur, Karnataka, India</span>
+    <span>© 2026 Melange Farms · Grown with care in Dodballapur, Karnataka, India</span>
     <span>Founding grower member, SPICE100</span>
   </div>
 </footer>
